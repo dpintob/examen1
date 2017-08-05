@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Josefin-SemiBold';
+  src: url(../fonts/JosefinSans-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Josefin-Regular';
+  src: url(../fonts/JosefinSans-Regular.ttf);
+}
+@font-face {
+  font-family: 'Josefin-Light';
+  src: url(../fonts/JosefinSans-Light.ttf);
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url(../fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+body{
+  font-family: 'Josefin-Light', sans-serif;
+  margin: 0 auto;
+  max-width: 100%;
+  z-index: 0 auto;
+  overflow-x: hidden;
+}
+main{
+  padding: 0 0;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+header .headLine{
+  width: 100%;
+  height: 5px;
+  background-color: #f1b310;
+  float: left;
+}
+.logo{
+  width: 100%;
+  height: 25em;
+  background-color: #ffffff;
+  float: left;
+  box-shadow: 5px 5px 10px #363636;
+}
+.logo img{
+  margin: 4% 0 0 15%;
+  width: 200px;
+  height: auto;
+  float: left;
+}
+.slogan{
+  width: 55%;
+  float: left;
+}
+.slogan h1{
+  margin: 20% 0 0 20%;
+  font-family: 'Josefin-SemiBold';
+  color: #0258a5;
+  font-size: 4.000em;
+  float: left;
+}
+.ctaSect{
+  background-image: url(../imgs/backimg.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30em;
+  float: left;
+}
+.ctaSect .cta1{
+  margin: 5% 0 0 33%;
+  float: left;
+}
+.ctaSect .cta2{
+  margin: 5% 0 0 10%;
+  float: left;
+}
+.ctaSect input[type=button]{
+  border: none;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.250em;
+  border-radius: 40px;
+  padding: 10px;
+  font-family: 'Roboto-Regular';
+  transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+.ctaSect input[type=button]:hover{
+  border: none;
+  text-decoration: none;
+  background-color: #f1b310;
+  transition-duration: 0.2s;
+  transform: scale(1.1);
+  transition-timing-function: ease-in-out;
+  -moz-transition-duration: 0.2s;
+  -moz-transform: scale(1.1);
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 0.2s;
+  -webkit-transform: scale(1.1);
+  -webkit-transition-timing-function: ease-in-out;
+}
+.ctaSect input[type=button]:focus{
+  outline: 0;
+}
+
+  /* */
