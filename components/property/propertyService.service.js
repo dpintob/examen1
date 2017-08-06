@@ -701,7 +701,8 @@
   var publicAPI = {
     setProperties: _setProperties,
     getProperties: _getProperties,
-    propertyInfo: _propertyInfo
+    propertyInfo: _propertyInfo,
+    buyProperty: _buyProperty
   };
   return publicAPI;
 
@@ -727,6 +728,18 @@
       }
     }
     return propertyInfo
+  }
+
+  function _buyProperty(pPurchase){
+    var propertylist = _getProperties();
+    var price = 0;
+    for(var  i = 0; i < propertylist.length; i++){
+      if (pPurchase.property === propertylist[i].name){
+        propertylist[i].ownedby = pPurchase.customer;
+        price = propertylist[i].price;
+      }
+      localStorage.setItem('lspropertiesList', JSON.stringify(propertylist));
+    }
   }
 
   }

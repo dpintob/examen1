@@ -28,5 +28,21 @@
         propertyCtrl.probability = pproperty.probability;
 
       }
+
+      propertyCtrl.save = function(){
+        var  newPurchase = {
+          customer: propertyCtrl.user,
+          property: propertyCtrl.property
+        }
+        PropertyService.buyProperty(newPurchase);
+        init();
+        clean();
+      }
+
+      function clean() {
+        propertyCtrl.user = '';
+        propertyCtrl.property = '';
+      }
+
     }
 })();

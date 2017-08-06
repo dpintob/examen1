@@ -10,6 +10,7 @@
           name:'Goku',
           alias: 'Kokkun',
           money: 1500,
+          property: [],
           photo:'https://res.cloudinary.com/pabskun/image/upload/v1489535279/goku_cqc9tb.png'
        },
        {
@@ -17,6 +18,7 @@
           name:'Piccolo',
           alias: 'PikOREO',
           money: 1500,
+          property: [],
           photo:'https://res.cloudinary.com/pabskun/image/upload/v1489535276/piccolo_ksxdec.png'
         },
         {
@@ -24,6 +26,7 @@
           name:'Logan',
           alias: 'Lovezno',
           money: 1500,
+          property: [],
           photo:'https://res.cloudinary.com/pabskun/image/upload/v1489535284/lobezno_o1vs9g.png'
         },
         {
@@ -31,6 +34,7 @@
           name:'Bomberman',
           alias: 'Don Pepe y los Globos',
           money: 1500,
+          property: [],
           photo:'https://res.cloudinary.com/pabskun/image/upload/v1489535282/donpepe_x9hksw.png'
         }, ];
       var publicAPI = {

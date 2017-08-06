@@ -37,6 +37,18 @@
           controller: 'PropertyController',
           controllerAs: 'ctrl'
         })
+        .state('usersList', {
+          url: '/usersList',
+          templateUrl: 'components/usersList/usersList.view.html',
+          css: './css/styleReg.css',
+          resolve: {
+            load: ['$ocLazyLoad', function($ocLazyLoad) {
+              return $ocLazyLoad.load('./components/userReg/userReg.controller.js')
+            }]
+          },
+          controller: 'UserController',
+          controllerAs: 'ctrl'
+        })
 
         $urlRouterProvider.otherwise('/landing');
     };

@@ -3,7 +3,9 @@
     <nav>
       <a href="#!/landing"><img src="imgs/wwp3.png" alt="logo"></a>
       <a href="#!/landing">HOME</a>
-      <a href="#!/userReg">CUSTOMER REGISTRATION</a>
+      <a href="#!/userReg">REGISTRATION</a>
+      <a href="#!/property">BUY PROPERTIES</a>
+      <a href="#!/usersList">CUSTOMER LIST</a>
     </nav>
   </div>
 </header>
@@ -23,7 +25,7 @@
             <md-option ng-repeat="property in ctrl.properties" value="{{property.name}}">{{property.name}}</option>
         </md-select>
       </md-input-container>
-      <md-button  class="md-raised md-primary" ng-disabled="buyForm.$invalid">Buy</md-button>
+      <md-button  class="md-raised md-primary" ng-disabled="buyForm.$invalid" ng-click="ctrl.save()">Buy</md-button>
     </form>
   </div>
   <h2>Property information</h2>

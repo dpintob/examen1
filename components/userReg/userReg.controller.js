@@ -18,6 +18,7 @@
           name: userCtrl.name,
           alias: userCtrl.alias,
           money: 1000,
+          property: userCtrl.property,
           photo: userCtrl.photo
         }
         var Validation = UserService.noRepeat(newUser)
@@ -33,6 +34,7 @@
         userCtrl.name = puser.name;
         userCtrl.alias = puser.alias;
         userCtrl.money = puser.money;
+        userCtrl.property = puser.property;
         userCtrl.photo = puser.photo;
       }
 
@@ -42,6 +44,7 @@
           name: userCtrl.name,
           alias: userCtrl.alias,
           money: 1000,
+          property: userCtrl.property,
           photo: userCtrl.photo
         }
 
@@ -49,6 +52,8 @@
         init();
         clean();
       }
+
+    userCtrl.save
 
       function clean() {
         userCtrl.id = '';

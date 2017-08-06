@@ -1,0 +1,28 @@
+<header>
+  <div class="navbar">
+    <nav>
+      <a href="#!/landing"><img src="imgs/wwp3.png" alt="logo"></a>
+      <a href="#!/landing">HOME</a>
+      <a href="#!/userReg">REGISTRATION</a>
+      <a href="#!/property">BUY PROPERTIES</a>
+      <a href="#!/usersList">CUSTOMER LIST</a>
+    </nav>
+  </div>
+</header>
+<main ng-controller="UserController as ctrl">
+  <div class="card">
+    <md-card ng-repeat="user in ctrl.users" md-theme="{{'default'}}" md-theme-watch>
+      <md-card-title>
+        <md-card-title-text>
+          <span class="md-headline"><b>Name: </b>{{user.name}}</span>
+          <span class="md-subhead"><b>As known as: </b>{{user.alias}}</span>
+          <span class="md-subhead"><b>Id: </b>{{user.id}}</span>
+          <span class="md-subhead"><b>Money: </b>{{user.money}}</span>
+        </md-card-title-text>
+        <md-card-title-media>
+          <div class="md-media-md card-media"><img ng-src="{{user.photo}}" alt=""></div>
+        </md-card-title-media>
+      </md-card-title>
+    </md-card>
+  </div>
+</main>

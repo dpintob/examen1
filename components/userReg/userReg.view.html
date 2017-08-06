@@ -3,12 +3,14 @@
     <nav>
       <a href="#!/landing"><img src="imgs/wwp3.png" alt="logo"></a>
       <a href="#!/landing">HOME</a>
+      <a href="#!/userReg">REGISTRATION</a>
       <a href="#!/property">BUY PROPERTIES</a>
+      <a href="#!/usersList">CUSTOMER LIST</a>
     </nav>
   </div>
 </header>
 <main ng-controller="UserController as ctrl">
-  <h2>Customer list & registration</h2>
+  <h2>Customer registration</h2>
   <div class="formDiv">
     <form name="userReg" class="formClass" autocomplete="off">
       <md-input-container class="md-block" flex-gt-sm>
@@ -53,7 +55,7 @@
             <td>{{user.name}}</td>
             <td>{{user.alias}}</td>
             <td>{{user.money}}</td>
-            <td><img ng-src="{{user.photo}}" alt="No photo"></td>
+            <td><img ng-src="{{user.photo}}" alt="Photo"></td>
           </tr>
         </tbody>
       </table>
