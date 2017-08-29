@@ -10,16 +10,16 @@
     $stateProvider
       .state('landing', {
         url: '/landing',
-        templateUrl: './components/landing/landing.view.html',
-        css: './css/style.css'
+        templateUrl: './public/components/landing/landing.view.html',
+        css: './public/css/style.css'
       })
       .state('userReg', {
           url: '/userReg',
-          templateUrl: './components/userReg/userReg.view.html',
-          css: './css/styleReg.css',
+          templateUrl: './public/components/userReg/userReg.view.html',
+          css: './public/css/styleReg.css',
           resolve: {
             load: ['$ocLazyLoad', function($ocLazyLoad) {
-              return $ocLazyLoad.load('./components/userReg/userReg.controller.js')
+              return $ocLazyLoad.load('./public/components/userReg/userReg.controller.js')
             }]
           },
           controller: 'UserController',
@@ -27,11 +27,11 @@
         })
         .state('property', {
           url: '/property',
-          templateUrl: 'components/property/property.view.html',
-          css:  './css/styleReg.css',
+          templateUrl: './public/components/property/property.view.html',
+          css:  './public/css/styleReg.css',
           resolve: {
             load: ['$ocLazyLoad', function($ocLazyLoad) {
-              return $ocLazyLoad.load(['./components/property/propertyController.controller.js', './components/userReg/userReg.controller.js'])
+              return $ocLazyLoad.load(['./public/components/property/propertyController.controller.js', './public/components/userReg/userReg.controller.js'])
             }]
           },
           controller: 'PropertyController',
@@ -39,11 +39,11 @@
         })
         .state('usersList', {
           url: '/usersList',
-          templateUrl: 'components/usersList/usersList.view.html',
-          css: './css/styleReg.css',
+          templateUrl: './public/components/usersList/usersList.view.html',
+          css: './public/css/styleReg.css',
           resolve: {
             load: ['$ocLazyLoad', function($ocLazyLoad) {
-              return $ocLazyLoad.load('./components/userReg/userReg.controller.js')
+              return $ocLazyLoad.load('./public/components/userReg/userReg.controller.js')
             }]
           },
           controller: 'UserController',
