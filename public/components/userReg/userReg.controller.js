@@ -2,10 +2,17 @@
   angular
     .module('WWP-app')
     .controller('UserController', UserController);
+    UserController.$inject = ['UserService'];
 
     function UserController(UserService){
       var userCtrl = this;
+      loadUsers();
 
+      function loadUsers() {
+        UserService.getUsers().then(function(response) {
+          userCtrl.users = response.data;
+        });
+      }
       function init(){
         userCtrl.users = UserService.getUsers();
         userCtrl.to = {};

@@ -3,7 +3,7 @@
     .module('WWP-app')
     .service('UserService', UserService);
 
-    function UserService() {
+    function UserService($http) {
       var users = [
         {
           id: 001,
@@ -47,18 +47,10 @@
       return publicAPI;
 
       function _setUsers(pUser){
-        var userlist = _getUsers();
-
-        userlist.push(pUser);
-        localStorage.setItem('lsusersList', JSON.stringify(userlist));
+        return $http.post('http://localhost:3000/api/users',pUser);
       }
-
       function _getUsers(){
-        var userlist = JSON.parse(localStorage.getItem('lsusersList'));
-        if (userlist == null){
-          userlist = users;
-        }
-        return userlist;
+        return $http.get('http://localhost:3000/api/users');
       }
 
       function _updateUser(pobjUser) {

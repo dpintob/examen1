@@ -8,7 +8,7 @@ var express = require('express'),
 
 // Se establece una conexión con mongoose por medio de las siguientes variables
 var db = mongoose.connection,
-    dburl = 'mongodb://dpinto:pintopinto2410@ds161873.mlab.com:61873/db_dpinto',
+    dburl = 'mongodb://dpintob:pintopinto@ds161873.mlab.com:61873/db_dpinto',
     port = 3000;
 // se le indica al servidor la tarea a ejecutar
 var server = app.listen(port,_server());
@@ -44,8 +44,7 @@ var index = require('./index');
 // // Se definen las rutas de los servicios con las que se conecta el front-end
     app.use('/api', userRoutes);
     app.use('/api', propertyRoutes);
-
-app.use('/', index);
+    app.use('/', index);
 
 // Se guarda todo lo que se ha realizado
 module.exports = app;
