@@ -4,10 +4,10 @@ module.exports.save = function(req,res){ //exporta el controlador
         var newUser = new User({
           id: req.body.id,
           name: req.body.name,
-          alias: req.body.name,
-          money: req.body.name,
-          property: req.body.name,
-          photo: req.body.name
+          alias: req.body.alias,
+          money: req.body.money,
+          property: req.body.property,
+          photo: req.body.photo
         });
 
         newUser.save(function(err){
