@@ -6,7 +6,8 @@ var UserSchema = new mongoose.Schema({
       alias: String,
       money: String,
       property: String,
-      photo: String
+      photo: String,
+      bio: String
 });
 
 module.exports = mongoose.model('User', UserSchema);

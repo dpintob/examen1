@@ -35,8 +35,12 @@
         </div>
       </md-input-container>
       <md-input-container class="md-block" flex-gt-sm>
+        <h5>Bio:</h5>
+				<md-button type="button" value="Upload" class="md-raised md-primary" ng-click="ctrl.showPicker()" ng-model="ctrl.bio">Upload file</md-button>
+			</md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
         <h5>Photo:</h5>
-        <input type="file" id="photo" ng-model="ctrl.photo">
+        <md-button type="file" value="Upload" id="photo" class="md-raised md-primary" ng-model="ctrl.photo">Upload file</md-button>
       </md-input-container>
       <md-button ng-click="ctrl.save()" class="md-raised md-primary" ng-disabled="userReg.$invalid">Register</md-button>
       <p>* Data Required</p>
@@ -52,6 +56,8 @@
             <th>Names</th>
             <th>Alias</th>
             <th>Money</th>
+            <th>Bio</th>
+            <th>Photo</th>
           </tr>
         </thead>
         <tbody>
@@ -60,7 +66,8 @@
             <td>{{user.name}}</td>
             <td>{{user.alias}}</td>
             <td>{{user.money}}</td>
-            <td><img ng-src="{{user.photo}}" alt="Photo"></td>
+            <td><a class="button" href="{{user.bio}}" target="_blank">BIO</a></td>
+            <td><a class="button" href="{{user.photo}}" target="_blank" alt="Photo">PHOTO</a></td>
           </tr>
         </tbody>
       </table>
@@ -68,3 +75,17 @@
   </div>
 </main>
 <div class="clearFix"></div>
+<script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+      <!-- <script>
+         const link = document.getElementById('url');
+         const client = filestack.init('A3kT6wcvoQCiDhivHSkKpz');
+              client.pick({
+             accept: ['image/*', '.pdf', 'video/mp4','docx','.zip','.txt']
+            }).then(function(result) {
+              const fileUrl = result.filesUploaded[0].url;
+              link.href=fileUrl;
+              link.innerHTML=fileUrl;
+              console.log(fileUrl)
+              localStorage.setItem('lsUrl', JSON.stringify(fileUrl));
+            });
+      </script> -->
