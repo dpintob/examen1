@@ -1,7 +1,7 @@
 <header>
   <div class="navbar">
     <nav>
-      <a href="#!/landing"><img src="public/imgs/wwp3.png" alt="logo"></a>
+      <a href="#!/landing"><img src="imgs/wwp3.png" alt="logo"></a>
       <a href="#!/landing">HOME</a>
       <a href="#!/userReg">REGISTRATION</a>
       <a href="#!/property">BUY PROPERTIES</a>
@@ -17,25 +17,30 @@
         <label>Identification number:</label>
         <input name="id" ng-model="ctrl.id" required ng-minlength="1" ng-pattern="/^[0-9]{1,}$/">
         <div ng-messages="userReg.id.$error">
-          <div ng-messages-include="public/components/include/messages.html"></div>
+          <div ng-messages-include="/components/include/messages.html"></div>
         </div>
       </md-input-container>
       <md-input-container class="md-block" flex-gt-sm>
         <label>Name:</label>
         <input name="name" ng-model="ctrl.name" required ng-pattern="/^[a-zA-ZáéíóúÁÉÍÓÚ]+$/">
         <div ng-messages="userReg.name.$error">
-          <div ng-messages-include="public/components/include/messages.html"></div>
+          <div ng-messages-include="/components/include/messages.html"></div>
         </div>
       </md-input-container>
       <md-input-container class="md-block" flex-gt-sm>
         <label>Alias:</label>
         <input name="alias" ng-model="ctrl.alias" required ng-pattern="/^[a-zA-ZáéíóúÁÉÍÓÚ]+$/">
         <div ng-messages="userReg.alias.$error">
-          <div ng-messages-include="public/components/include/messages.html"></div>
+          <div ng-messages-include="/components/include/messages.html"></div>
         </div>
       </md-input-container>
+      <md-input-container class="md-block" flex-gt-sm>
+        <h5>Photo:</h5>
+        <input type="file" id="photo" ng-model="ctrl.photo">
+      </md-input-container>
       <md-button ng-click="ctrl.save()" class="md-raised md-primary" ng-disabled="userReg.$invalid">Register</md-button>
-      <p>* Dosen't register repeated data</p>
+      <p>* Data Required</p>
+      <p>Dosen't register repeated data</p>
     </form>
   </div>
   <div class="tableDiv">
